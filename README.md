@@ -35,6 +35,10 @@ Location Data and Map received from [Location IQ API](https://locationiq.com/)
 
 ## Feature implementation tracking
 
+### 11-01-2021
+
+![wrrc sketch](readme-img/11-01-wrrc.png)
+
 * **Name of feature:** Set up React repo & API keys
 * Estimate of time needed to complete: 1 hour
 * Start time: 4:09 PM

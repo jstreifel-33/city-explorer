@@ -30,22 +30,22 @@ This app will be used to provide a user with details about a location, based upo
 * **Name of feature:** Set up React repo & API keys
 * Estimate of time needed to complete: 1 hour
 * Start time: 4:09 PM
-* Finish time:
+* Finish time: 4:55PM
 * Actual time needed to complete: 
 
- **Name of feature:** Locations - search for city by name
+* **Name of feature:** Locations - search for city by name
 * Estimate of time needed to complete: 0.75 hours
-* Start time:
+* Start time: 5:06 PM
 * Finish time:
 * Actual time needed to complete: 
 
- **Name of feature:** Map - display map based on name of city
+* **Name of feature:** Map - display map based on name of city
 * Estimate of time needed to complete: 1.5 hour
 * Start time:
 * Finish time:
 * Actual time needed to complete: 
 
- **Name of feature:** Errors - handle errors and display error messages
+* **Name of feature:** Errors - handle errors and display error messages
 * Estimate of time needed to complete: 1 hour
 * Start time:
 * Finish time:

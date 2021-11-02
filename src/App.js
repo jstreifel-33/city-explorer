@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import axios from 'axios'
+import Main from './components/Main';
+import Header from './components/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      location: {},
+      showResults: false,
+    }
+  }
+
+  queryLocation = async (term) => {
+    const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&q=${term}&format=json`;
+    let queryResults = await axios.get(url);
+    let locData = queryResults.data[0];
+    console.log(locData);
+    this.setState({location: locData});
+  }
+
+  render() {
+    return (
+      <div>
+        <Header/>
+        <Main queryLocation={this.queryLocation} location={this.state.location} showResults={this.state.showResults}/>
+      </div>
+    )
+  }
 }
-
-export default App;

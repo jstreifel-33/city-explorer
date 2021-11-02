@@ -9,6 +9,8 @@ export default class App extends Component {
     super(props);
     this.state = {
       location: {},
+      locationLatLon: [],
+      mapUrl: '',
       showResults: false,
     }
   }
@@ -17,15 +19,29 @@ export default class App extends Component {
     const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&q=${term}&format=json`;
     let queryResults = await axios.get(url);
     let locData = queryResults.data[0];
-    console.log(locData);
-    this.setState({location: locData});
+    let latLon = [locData.lat, locData.lon];
+
+    let mapUrl = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&center=${latLon[0]},${latLon[1]}&zoom=11&size=1000x1000&format=png&maptype=roadmap&markers=icon:small-red-cutout|${latLon[0]},${latLon[1]}`;
+
+    this.setState({
+      location: locData, 
+      locationLatLon: latLon, 
+      showResults: true,
+      mapUrl: mapUrl
+    });
   }
 
   render() {
     return (
       <div>
         <Header/>
-        <Main queryLocation={this.queryLocation} location={this.state.location} showResults={this.state.showResults}/>
+        <Main 
+          queryLocation={this.queryLocation} 
+          location={this.state.location} 
+          mapUrl = {this.state.mapUrl}
+          latLon={this.state.locationLatLon}
+          showResults={this.state.showResults}
+          />
       </div>
     )
   }

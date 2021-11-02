@@ -36,17 +36,17 @@ This app will be used to provide a user with details about a location, based upo
 * **Name of feature:** Locations - search for city by name
 * Estimate of time needed to complete: 0.75 hours
 * Start time: 5:06 PM
-* Finish time:
+* Finish time: 6:22 PM
 * Actual time needed to complete: 
 
 * **Name of feature:** Map - display map based on name of city
 * Estimate of time needed to complete: 1.5 hour
-* Start time:
-* Finish time:
+* Start time: 7:10 PM
+* Finish time: 9:26 PM
 * Actual time needed to complete: 
 
 * **Name of feature:** Errors - handle errors and display error messages
 * Estimate of time needed to complete: 1 hour
-* Start time:
+* Start time: 9:27 PM
 * Finish time:
 * Actual time needed to complete: 

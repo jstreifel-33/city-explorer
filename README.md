@@ -33,11 +33,21 @@ Developed in VSCode and deployed using Node.js. Hosted on Netlify.
 
 Location Data and Map received from [Location IQ API](https://locationiq.com/)
 
+## WRRC Breakdown
+
+![wrrc sketch](readme-img/11-01-wrrc.png)
+
+For this project, my WRRC will be utilizing axios to reach out to a server and request data based on a user input string:
+
+1. User submits string in search box
+2. Application creates URL for data request and send it to Location IQ to retrieve location data
+3. Location IQ sends response, which is displayed on screen.
+4. Latitude and Longitude from response are used to create image URL for map.
+5. Map image src is set to new URL, displaying map of area result from user search.
+
 ## Feature implementation tracking
 
 ### 11-01-2021
-
-![wrrc sketch](readme-img/11-01-wrrc.png)
 
 * **Name of feature:** Set up React repo & API keys
 * Estimate of time needed to complete: 1 hour

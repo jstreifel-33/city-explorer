@@ -9,7 +9,7 @@ export default class DispResults extends Component {
         <Card className="md-6" style={{ marginTop: "10px" }}>
           <Card.Img src={this.props.mapUrl} />
           <Card.Body>
-            <Card.Text>Location: {this.props.location.display_name}</Card.Text>
+            <Card.Title>Location: {this.props.location.display_name}</Card.Title>
             <Card.Text>Latitude: {this.props.location.lat}</Card.Text>
             <Card.Text>Longitude: {this.props.location.lon}</Card.Text>
           </Card.Body>

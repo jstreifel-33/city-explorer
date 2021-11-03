@@ -4,6 +4,7 @@ import { CardGroup, Card } from 'react-bootstrap'
 export default class Weather extends Component {
 
   forecast = (data) => {
+    return(
     data.map((day, idx) => {
       return (
         <Card key={idx}>
@@ -11,7 +12,7 @@ export default class Weather extends Component {
           <Card.Text>{day.description}</Card.Text>
         </Card>
       )
-    });
+    }))
   }
 
   render() {

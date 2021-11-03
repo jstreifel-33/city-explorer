@@ -1,7 +1,7 @@
 # City Explorer
 
 **Author**: Joseph Streifel
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.1.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 
@@ -9,9 +9,9 @@ This app will be used to provide a user with details about a location, based upo
 
 ## Getting Started
 
-This app is built using React Bootstrap and Axios. Ensure all dependencies are installed upon cloning project.
+This app is built using React Bootstrap and Axios. Ensure all dependencies are installed by running `npm i` upon cloning project.
 
-* Environment Variables: See .env.sample for .env requirements. App will need API access key from location IQ.
+* Environment Variables: See .env.sample for .env requirements. App will need API access key from location IQ, as well as address for supporting back-end server.
 
 ## Architecture
 
@@ -27,10 +27,12 @@ Developed in VSCode and deployed using Node.js. Hosted on Netlify.
 
 ## Change Log
 
-11/01 10:07PM - Application launched in operating state. Accepts search parameter and returns top result and associated map.
+11/01 10:07pm - Application launched in operating state. Accepts search parameter and returns top result and associated map.
+11/02 08:50pm - Weather data retrieval implemented in application. Tied to node.js server backend.
 
 ## Credit and Collaborations
 
+Collaborated with [Brannon Starnes](https://github.com/brannonstarnes) for WRRC sketch and application planning
 Location Data and Map received from [Location IQ API](https://locationiq.com/)
 
 ## WRRC Breakdown

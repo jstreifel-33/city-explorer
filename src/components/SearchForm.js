@@ -13,20 +13,19 @@ export default class SearchForm extends Component {
   }
 
   handleError = (e) => {
-    console.log(e.response);
-    if (e.status) {
+    if (e.response.status) {
       this.setState({
         showError: true,
         error: {
           code: e.response.status,
-          message: e.response.data.error
+          message: e.response.data.error || e.response.statusText
         }
       });
     } else {
       this.setState({
         showError: true,
         error: {
-          code: 404,
+          code: 503,
           message: 'Additional information server not detected!',
         },
       })
@@ -37,10 +36,6 @@ export default class SearchForm extends Component {
     e.preventDefault();
     try {
       await this.props.queryLocation(e.target.term.value);
-    } catch (e) {
-      this.handleError(e);
-    }
-    try {
       await this.props.queryWeather(this.props.latLon[0], this.props.latLon[1]);
     } catch (e) {
       this.handleError(e);

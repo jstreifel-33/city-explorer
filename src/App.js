@@ -32,6 +32,15 @@ export default class App extends Component {
     });
   }
 
+  queryWeather = async (lat, lon) =>{
+    let loc = this.state.location;
+    let results = await axios.get(`${process.env.REACT_APP_SERVER_URL}/weather?name=${loc.display_name}&lat=${loc.lat}&lon=${loc.lon}`);
+    console.log(results.data);
+    this.setState({
+      weather: results
+    })
+  }
+
   render() {
     return (
       <div>
@@ -42,6 +51,7 @@ export default class App extends Component {
           mapUrl = {this.state.mapUrl}
           latLon={this.state.locationLatLon}
           showResults={this.state.showResults}
+          queryWeather={this.queryWeather}
           />
         <Footer/>
       </div>

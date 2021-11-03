@@ -26,6 +26,10 @@ export default class SearchForm extends Component {
         }
       });
     }
+    try {await this.props.queryWeather(this.props.latLon[0], this.props.latLon[1])}
+    catch(error){
+      console.log(error);
+    }
     e.target.term.value = '';
   }
 
@@ -38,7 +42,11 @@ export default class SearchForm extends Component {
   render() {
     return (
       <>
-      <ErrorAlert show={this.state.showError} error={this.state.error} hideAlert={this.hideAlert}/>
+      <ErrorAlert 
+        show={this.state.showError} 
+        error={this.state.error} 
+        hideAlert={this.hideAlert}
+      />
       <Form onSubmit={this.handleSubmit}>
         <Form.Group className="mb-1">
           <Form.Label>Search for a city to see more details!</Form.Label>

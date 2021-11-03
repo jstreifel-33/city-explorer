@@ -8,11 +8,21 @@ export default class Main extends Component {
     return (
       <>
         <Container className="main">
-          <SearchForm queryLocation={this.props.queryLocation} getMap={this.props.getMap} latLon={this.props.latLon} />
+          <SearchForm 
+            queryLocation={this.props.queryLocation} 
+            queryWeather={this.props.queryWeather}
+            getMap={this.props.getMap} 
+            latLon={this.props.latLon} 
+          />
         </Container>
         <Container>
           {this.props.showResults &&
-            <DispResults location={this.props.location} mapUrl={this.props.mapUrl} show={this.props.showResults} latLon={this.props.latLon} />
+            <DispResults 
+              location={this.props.location} 
+              mapUrl={this.props.mapUrl} 
+              show={this.props.showResults} 
+              latLon={this.props.latLon} 
+            />
           }
         </Container>
       </>

@@ -34,7 +34,7 @@ export default class Main extends Component {
             <Weather weatherData={this.props.weatherData} />
           </Col>
         </Row>
-
+      
         <Row md="auto">
           <Movies movies={this.props.movies} />
         </Row>

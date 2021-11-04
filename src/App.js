@@ -72,7 +72,6 @@ export default class App extends Component {
           latLon={this.state.locationLatLon}
           showResults={this.state.showResults}
           />
-          <button onClick={this.handleClick}>get movies</button>
         <Footer/>
       </div>
     )

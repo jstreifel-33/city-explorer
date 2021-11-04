@@ -10,7 +10,7 @@ export default class Movies extends Component {
           <Card key={idx}>
             <Card.Title>{movie.title}</Card.Title>
             <Card.Body>
-              <Card.Img src={movie.posterUrl}></Card.Img>
+              <Card.Img src={movie.posterUrl} alt="Error loading image :("></Card.Img>
               <Card.Text style={{height:"100px", overflow:"scroll", borderBottom:"thin solid black"}}>{movie.description}</Card.Text>
               <Card.Subtitle>Released: {movie.release}</Card.Subtitle>
             </Card.Body>
@@ -24,9 +24,9 @@ export default class Movies extends Component {
 
   render() {
     return (
-      <div>
+      <>
         {this.mapMovies(this.props.movies)}
-      </div>
+      </>
     )
   }
 }

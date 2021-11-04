@@ -41,6 +41,7 @@ location:{
 11/01 10:07pm - Application launched in operating state. Accepts search parameter and returns top result and associated map.
 11/02 08:50pm - Weather data retrieval implemented in application. Tied to node.js server backend.
 11-03-21 08:54 PM - Movie data retrieval from backend successful on user submit.
+11-03-21 10:52 PM - Updates Weather display to look nicer and adds icons.
 
 
 ## Credit and Collaborations
@@ -91,5 +92,5 @@ For this project, my WRRC will be utilizing axios to reach out to a server and r
 * **Name of feature:** Movie Data - Render to page upon retrieval
 * Estimate of time needed to complete: 1 hour
 * Start time: 08:24 PM
-* Finish time: 00:00 PM
+* Finish time: 10:02 PM
 * Actual time needed to complete: 0

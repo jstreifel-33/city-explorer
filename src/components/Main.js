@@ -35,6 +35,7 @@ export default class Main extends Component {
           </Col>
         </Row>
       
+        <h2>Movies Related to Location</h2>
         <Row md="auto">
           <Movies movies={this.props.movies} />
         </Row>

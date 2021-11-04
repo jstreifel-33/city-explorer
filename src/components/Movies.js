@@ -6,8 +6,8 @@ export default class Movies extends Component {
   mapMovies = (movieArr) => {
     return (movieArr.map((movie, idx) => {
       return (
-        <Col md={3}>
-          <Card key={idx}>
+        <Col key={idx} md={3}>
+          <Card>
             <Card.Title>{movie.title}</Card.Title>
             <Card.Body>
               <Card.Img src={movie.posterUrl} alt="Error loading image :("></Card.Img>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, Col } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 
 export default class DispResults extends Component {
   render() {

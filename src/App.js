@@ -13,7 +13,8 @@ export default class App extends Component {
       locationLatLon: [],
       mapUrl: '',
       showResults: false,
-      weather: []
+      weather: [],
+      movies: []
     }
   }
 
@@ -41,6 +42,21 @@ export default class App extends Component {
     })
   }
 
+  queryMovieRef = async (location) => {
+    let place = location.display_name;
+    let city = place.split(',')[0];
+    let results = await axios.get(`${process.env.REACT_APP_SERVER_URL}/movies?name=${city}`)
+    console.log(results.data);
+    this.setState({
+      movies: results.data
+    })
+  }
+
+  handleClick = () =>{
+    let place = this.state.location.display_name;
+    this.queryMovieRef(place);
+  }
+
   render() {
     return (
       <div>
@@ -48,9 +64,11 @@ export default class App extends Component {
         <Main 
           queryLocation={this.queryLocation} 
           queryWeather={this.queryWeather}
+          queryMovieRef={this.queryMovieRef}
           location={this.state.location} 
           mapUrl = {this.state.mapUrl}
           weatherData={this.state.weather}
+          movies={this.state.movies}
           latLon={this.state.locationLatLon}
           showResults={this.state.showResults}
           />

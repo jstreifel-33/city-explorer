@@ -9,7 +9,7 @@ export default class Weather extends Component {
       return (
         <Card key={idx}>
           <Card.Title>{day.date}</Card.Title>
-          <Card.Text>{day.description}</Card.Text>
+          <Card.Text>High of {day.highTemp}&#176;F<br/>Low of {day.lowTemp}&#176;F<br/>{day.description}</Card.Text>
         </Card>
       )
     }))

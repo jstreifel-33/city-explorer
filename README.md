@@ -25,10 +25,23 @@ Application uses React Bootstrap to setup simple form for text input. Search ter
 
 Developed in VSCode and deployed using Node.js. Hosted on Netlify.
 
+Upon request, location data is returned from locationIQ and stored in the following format:
+
+```js
+location:{
+  display_name: "City, County, State, Country"
+  lat: "degrees"
+  lon: "degrees"
+
+}
+```
+
 ## Change Log
 
 11/01 10:07pm - Application launched in operating state. Accepts search parameter and returns top result and associated map.
 11/02 08:50pm - Weather data retrieval implemented in application. Tied to node.js server backend.
+11-03-21 08:54 PM - Movie data retrieval from backend successful on user submit.
+
 
 ## Credit and Collaborations
 
@@ -74,3 +87,9 @@ For this project, my WRRC will be utilizing axios to reach out to a server and r
 * Start time: 9:27 PM
 * Finish time: 10:05 PM
 * Actual time needed to complete: 38 minutes
+
+* **Name of feature:** Movie Data - Render to page upon retrieval
+* Estimate of time needed to complete: 1 hour
+* Start time: 08:24 PM
+* Finish time: 00:00 PM
+* Actual time needed to complete: 0

@@ -32,7 +32,6 @@ location:{
   display_name: "City, County, State, Country"
   lat: "degrees"
   lon: "degrees"
-
 }
 ```
 
@@ -93,4 +92,4 @@ For this project, my WRRC will be utilizing axios to reach out to a server and r
 * Estimate of time needed to complete: 1 hour
 * Start time: 08:24 PM
 * Finish time: 10:02 PM
-* Actual time needed to complete: 0
+* Actual time needed to complete: 1 hour 38 minutes

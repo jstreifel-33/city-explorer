@@ -13,7 +13,7 @@ export default class SearchForm extends Component {
   }
 
   handleError = (e) => {
-    if (e.response.status) {
+    if (e.response) {
       this.setState({
         showError: true,
         error: {

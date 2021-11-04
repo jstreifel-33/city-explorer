@@ -62,34 +62,10 @@ For this project, my WRRC will be utilizing axios to reach out to a server and r
 
 ## Feature implementation tracking
 
-### 11-01-2021
-
-* **Name of feature:** Set up React repo & API keys
-* Estimate of time needed to complete: 1 hour
-* Start time: 4:09 PM
-* Finish time: 4:55PM
-* Actual time needed to complete: 46 minutes
-
-* **Name of feature:** Locations - search for city by name
-* Estimate of time needed to complete: 0.75 hours
-* Start time: 5:06 PM
-* Finish time: 6:22 PM
-* Actual time needed to complete: 1 hour 16 minutes
-
-* **Name of feature:** Map - display map based on name of city
-* Estimate of time needed to complete: 1.5 hour
-* Start time: 7:10 PM
-* Finish time: 9:26 PM
-* Actual time needed to complete: 2 hours 16 minutes
-
-* **Name of feature:** Errors - handle errors and display error messages
-* Estimate of time needed to complete: 1 hour
-* Start time: 9:27 PM
-* Finish time: 10:05 PM
-* Actual time needed to complete: 38 minutes
-
-* **Name of feature:** Movie Data - Render to page upon retrieval
-* Estimate of time needed to complete: 1 hour
-* Start time: 08:24 PM
-* Finish time: 10:02 PM
-* Actual time needed to complete: 1 hour 38 minutes
+| Feature # | Feature Name | Estimated Time | Start Time | End Time | Total Time |
+|-----------|--------------|----------------|------------|----------|------------|
+| 1 | Set up React repo & API keys | 01:00 | 04:09 PM | 04:55 PM | 00:46 |
+| 2 | Locations - search city by name | 00:45 | 05:06 PM | 06:22 PM | 01:16 |
+| 3 | Map - display map based on search | 01:30 | 07:10 PM | 09:26 PM | 02:16 |
+| 4 | Errors - handle/display errors | 01:00 | 09:27 PM | 10:05 PM | 00:38 |
+| 5 | Movie Data - Render to page | 01:00 | 08:24 PM | 10:02 PM | 01:38 |

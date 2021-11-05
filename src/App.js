@@ -24,7 +24,7 @@ export default class App extends Component {
     let locData = queryResults.data[0];
     let latLon = [locData.lat, locData.lon];
 
-    let mapUrl = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&center=${latLon[0]},${latLon[1]}&zoom=11&size=1000x1000&format=png&maptype=roadmap&markers=icon:small-red-cutout|${latLon[0]},${latLon[1]}`;
+    let mapUrl = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&center=${locData.lat},${locData.lon}&zoom=11&size=1000x1000&format=png&maptype=roadmap&markers=icon:small-red-cutout|${locData.lat},${locData.lon}`;
 
     this.setState({
       location: locData, 
@@ -34,7 +34,7 @@ export default class App extends Component {
     });
   }
 
-  queryWeather = async (lat, lon) =>{
+  queryWeather = async () =>{
     let loc = this.state.location;
     let results = await axios.get(`${process.env.REACT_APP_SERVER_URL}/weather?name=${loc.display_name}&lat=${loc.lat}&lon=${loc.lon}`);
     this.setState({
@@ -42,11 +42,10 @@ export default class App extends Component {
     })
   }
 
-  queryMovieRef = async (location) => {
-    let place = location.display_name;
+  queryMovieRef = async () => {
+    let place = this.state.location.display_name;
     let city = place.split(',')[0];
     let results = await axios.get(`${process.env.REACT_APP_SERVER_URL}/movies?name=${city}`)
-    console.log(results.data);
     this.setState({
       movies: results.data
     })

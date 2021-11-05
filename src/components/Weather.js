@@ -7,7 +7,7 @@ export default class Weather extends Component {
     return (
       <>
         <h2 style={{ marin: "auto", marginTop: "20px" }}>Location Weather</h2>
-          {this.props.weatherData.map((day, idx) => <WeatherDay day={day} idx={idx}/>)}
+        {this.props.weatherData.map((day, idx) => <WeatherDay day={day} idx={idx} />)}
       </>
     )
   }

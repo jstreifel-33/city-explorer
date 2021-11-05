@@ -3,7 +3,7 @@ import { Accordion } from 'react-bootstrap'
 
 export default class WeatherDay extends Component {
   render() {
-    let {day, idx} = this.props;
+    let { day, idx } = this.props;
     return (
       <Accordion key={idx}>
         <Accordion.Item eventKey={idx}>

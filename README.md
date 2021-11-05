@@ -47,8 +47,12 @@ location:{
 
 Collaborated with [Brannon Starnes](https://github.com/brannonstarnes) for WRRC sketch and application planning
 Location Data and Map received from [Location IQ API](https://locationiq.com/)
+Weather Data and Icons provided by [Weatherbit.io API]()
+Movie data and posters provided by [themoviedb.org API]()
 
 ## WRRC Breakdown
+
+### 11-01
 
 ![wrrc sketch](readme-img/11-01-wrrc.png)
 
@@ -60,6 +64,12 @@ For this project, my WRRC will be utilizing axios to reach out to a server and r
 4. Latitude and Longitude from response are used to create image URL for map.
 5. Map image src is set to new URL, displaying map of area result from user search.
 
+### 11-04
+
+![wrrc sketch](readme-img/WRRC-11-04.png)
+
+Our WRRC is getting a bit more complex. Our netlify app makes a request to an API that we've hosted on Heroku. That API looks at the path of the request, and forwards parameters accordingly to either TMDB API or WeatherBit.io API. The pinged API returns a response object, from which the heroku API grabs the data. The heroku API then cleans up the data and sends it back to our Netlify app, completing this WRRC.
+
 ## Feature implementation tracking
 
 | Feature # | Feature Name | Estimated Time | Start Time | End Time | Total Time |
@@ -69,3 +79,5 @@ For this project, my WRRC will be utilizing axios to reach out to a server and r
 | 3 | Map - display map based on search | 01:30 | 07:10 PM | 09:26 PM | 02:16 |
 | 4 | Errors - handle/display errors | 01:00 | 09:27 PM | 10:05 PM | 00:38 |
 | 5 | Movie Data - Render to page | 01:00 | 08:24 PM | 10:02 PM | 01:38 |
+| 6 | Refactor - Componentize | 01:30 | 4:32 PM | 06:44 PM | 02:12 |
+

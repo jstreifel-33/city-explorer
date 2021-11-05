@@ -21,6 +21,7 @@ export default class Main extends Component {
 
         {this.props.showResults &&
           <>
+
             <Row>
               <Col md={8}>
                 <DispResults
@@ -30,6 +31,7 @@ export default class Main extends Component {
                 />
               </Col>
               <Col md={4}>
+                <h2 style={{ marin: "auto", marginTop: "20px" }}>Location Weather</h2>
                 <Weather weatherData={this.props.weatherData} />
               </Col>
             </Row>
@@ -38,6 +40,7 @@ export default class Main extends Component {
             <Row md="auto">
               <Movies movies={this.props.movies} />
             </Row>
+
           </>
         }
 

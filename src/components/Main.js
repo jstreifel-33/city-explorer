@@ -15,27 +15,31 @@ export default class Main extends Component {
           queryLocation={this.props.queryLocation}
           queryWeather={this.props.queryWeather}
           queryMovieRef={this.props.queryMovieRef}
+          setShow={this.props.setShow}
           location={this.props.location}
         />
-        <Row>
-          <Col md={8}>
-            {this.props.showResults &&
-              <DispResults
-                location={this.props.location}
-                mapUrl={this.props.mapUrl}
-                show={this.props.showResults}
-              />
-            }
-          </Col>
-          <Col md={4}>
-            <Weather weatherData={this.props.weatherData} />
-          </Col>
-        </Row>
-      
-        <h2>Movies Related to Location</h2>
-        <Row md="auto">
-          <Movies movies={this.props.movies} />
-        </Row>
+
+        {this.props.showResults &&
+          <>
+            <Row>
+              <Col md={8}>
+                <DispResults
+                  location={this.props.location}
+                  mapUrl={this.props.mapUrl}
+                  show={this.props.showResults}
+                />
+              </Col>
+              <Col md={4}>
+                <Weather weatherData={this.props.weatherData} />
+              </Col>
+            </Row>
+
+            <h2>Movies Related to Location</h2>
+            <Row md="auto">
+              <Movies movies={this.props.movies} />
+            </Row>
+          </>
+        }
 
       </Container>
 

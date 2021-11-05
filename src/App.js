@@ -58,6 +58,7 @@ export default class App extends Component {
           queryLocation={this.queryLocation} 
           queryWeather={this.queryWeather}
           queryMovieRef={this.queryMovieRef}
+          setShow={this.setShow}
           location={this.state.location} 
           mapUrl = {this.state.mapUrl}
           weatherData={this.state.weather}

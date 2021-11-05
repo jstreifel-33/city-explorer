@@ -34,12 +34,15 @@ export default class SearchForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
+    this.setState({ showError: false })
     try {
       await this.props.queryLocation(e.target.term.value);
-      await this.props.queryWeather(this.props.latLon[0], this.props.latLon[1]);
+      await this.props.queryWeather();
       await this.props.queryMovieRef(this.props.location);
+      this.props.setShow(true);
     } catch (e) {
       this.handleError(e);
+      this.props.setShow(false);
     }
     e.target.term.value = '';
   }
@@ -54,7 +57,7 @@ export default class SearchForm extends Component {
     return (
       <>
         <ErrorAlert
-          show={this.state.showError}
+          showError={this.state.showError}
           error={this.state.error}
           hideAlert={this.hideAlert}
         />

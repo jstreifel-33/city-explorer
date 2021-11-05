@@ -8,7 +8,7 @@ export default class ErrorAlert extends Component {
   }
 
   render() {
-    if (this.props.show) {
+    if (this.props.showError) {
       return (
         <Alert variant="danger" onClose={() => this.setShow(false)} dismissible>
           <Alert.Heading>Oh no! Error code: {this.props.error.code}</Alert.Heading>

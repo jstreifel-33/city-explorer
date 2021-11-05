@@ -10,7 +10,6 @@ export default class App extends Component {
     super(props);
     this.state = {
       location: {},
-      locationLatLon: [],
       mapUrl: '',
       showResults: false,
       weather: [],
@@ -22,13 +21,11 @@ export default class App extends Component {
     const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&q=${term}&format=json`;
     let queryResults = await axios.get(url);
     let locData = queryResults.data[0];
-    let latLon = [locData.lat, locData.lon];
 
     let mapUrl = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&center=${locData.lat},${locData.lon}&zoom=11&size=1000x1000&format=png&maptype=roadmap&markers=icon:small-red-cutout|${locData.lat},${locData.lon}`;
 
     this.setState({
-      location: locData, 
-      locationLatLon: latLon, 
+      location: locData,
       showResults: true,
       mapUrl: mapUrl
     });
@@ -51,10 +48,7 @@ export default class App extends Component {
     })
   }
 
-  handleClick = () =>{
-    let place = this.state.location.display_name;
-    this.queryMovieRef(place);
-  }
+  setShow = (boolean) => this.setState({showResults: boolean})
 
   render() {
     return (
@@ -68,7 +62,6 @@ export default class App extends Component {
           mapUrl = {this.state.mapUrl}
           weatherData={this.state.weather}
           movies={this.state.movies}
-          latLon={this.state.locationLatLon}
           showResults={this.state.showResults}
           />
         <Footer/>

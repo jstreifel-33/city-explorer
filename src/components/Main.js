@@ -16,8 +16,6 @@ export default class Main extends Component {
           queryWeather={this.props.queryWeather}
           queryMovieRef={this.props.queryMovieRef}
           location={this.props.location}
-          getMap={this.props.getMap}
-          latLon={this.props.latLon}
         />
         <Row>
           <Col md={8}>
@@ -26,7 +24,6 @@ export default class Main extends Component {
                 location={this.props.location}
                 mapUrl={this.props.mapUrl}
                 show={this.props.showResults}
-                latLon={this.props.latLon}
               />
             }
           </Col>
